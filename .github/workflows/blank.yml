@@ -19,12 +19,13 @@ jobs:
     - uses: actions/checkout@v2
       
     - run: |
-        rm -rf foo
+        mkdir -p bar/baz
 
     - uses: actions/cache@v2
       with:
-        path: foo
+        path: bar
         key: ${{ runner.os }}-v1
         
     - run: |
         ls foo
+        ls bar
