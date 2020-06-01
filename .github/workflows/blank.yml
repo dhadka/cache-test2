@@ -17,8 +17,14 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+      
+    - run: |
+        rm -rf foo
 
     - uses: actions/cache@v2
       with:
         path: foo
         key: ${{ runner.os }}-v1
+        
+    - run: |
+        ls foo
