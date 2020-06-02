@@ -24,7 +24,7 @@ jobs:
     - uses: actions/cache@v2
       with:
         path: bar
-        key: ${{ runner.os }}-v2
+        key: ${{ runner.os }}-v2-abcdefg
         
     - run: |
         ls foo
